@@ -1,0 +1,36 @@
+.layout-container .el-header {
+position: relative;
+background-color: var(--el-color-primary-light-7);
+color: var(--el-text-color-primary);
+}
+.layout-container .el-aside {
+color: var(--el-text-color-primary);
+background: var(--el-color-primary-light-8);
+}
+.layout-container .el-menu {
+border-right: none;
+}
+.layout-container .el-menu:not(.el-menu--collapse) {
+    width: 200px;
+}
+.layout-container .el-main {
+padding: 0;
+}
+.layout-container .el-header {
+    display: flex;
+    font-size: 12px
+}
+.layout-container .toolbar {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+margin-left: auto;
+}
+.layout-container .toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+}
