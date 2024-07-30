@@ -10,9 +10,7 @@
         <script src="https://unpkg.com/element-plus"></script>
         <title>Element Plus demo</title>
         <!-- JS component -->
-        <script src="{{ URL::asset('js/components/ppSelect.js') }}"></script>
-        <script src="{{ URL::asset('js/components/ppDatePicker.js') }}"></script>
-        <script src="{{ URL::asset('js/components/ppCustomColumns.js') }}"></script>
+        <script src="{{ URL::asset('js/components/ppComponent.js') }}"></script>
     </head>
     <body >
         <div id="app">
@@ -40,9 +38,7 @@
         };
         const app = Vue.createApp(App);
         app.use(ElementPlus);
-        app.component('PpCustomColumns', PpCustomColumns);
-        app.component('PpDatePicker', PpDatePicker);
-        app.component('PpSelect', PpSelect);
+        app.use(ppPlugin);
         app.mount("#app");
         </script>
     </body>
