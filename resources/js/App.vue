@@ -5,6 +5,11 @@
     <el-button>Test</el-button>
 
     <div>
+        Page:
+        <Page />
+    </div>
+
+    <div>
         Components:
         <ExampleComponent />
     </div>
@@ -22,6 +27,7 @@ import { defineAsyncComponent } from "vue";
 export default {
     name: "App",
     components: {
+        Page: defineAsyncComponent(() => import('./components/page/index.vue')),
         ExampleComponent: defineAsyncComponent(() => import('./components/ExampleComponent.vue')),
         DynamicImport: defineAsyncComponent(() => import('./components/DynamicImport.vue')),
     },
