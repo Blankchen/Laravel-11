@@ -5,10 +5,5 @@
 </template>
 
 <script>
-export default {
-    async mounted() {
-        const { default: styles } = await import("@/sass/home.scss");
-        styles.use();
-    },
-};
+    await import("@/sass/home.scss");
 </script>

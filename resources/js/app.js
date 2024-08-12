@@ -14,11 +14,12 @@ import "element-plus/dist/index.css";
  * to use in your application's views. An example is included for you.
  */
 import App from "./App.vue";
-import { registerComponents } from './components/components'
 const app = createApp(App);
 
 app.use(ElementPlus);
-await registerComponents(app);
+
+// import { registerComponents } from './components/components'
+// await registerComponents(app);
 
 /**
  * The following block of code may be used to automatically register your

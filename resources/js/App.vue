@@ -6,11 +6,24 @@
 
     <div>
         Components:
-        <example-component></example-component>
+        <ExampleComponent />
     </div>
 
     <div>
         Dynamic import
-        <dynamic-import></dynamic-import>
+        <DynamicImport/>
     </div>
 </template>
+
+<!-- ref: https://github.com/laravel/vite-plugin/issues/184 -->
+<script>
+import { defineAsyncComponent } from "vue";
+
+export default {
+    name: "App",
+    components: {
+        ExampleComponent: defineAsyncComponent(() => import('./components/ExampleComponent.vue')),
+        DynamicImport: defineAsyncComponent(() => import('./components/DynamicImport.vue')),
+    },
+}
+</script>
