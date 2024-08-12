@@ -8,6 +8,9 @@
                     <div class="card-body">
                         I'm an example component.
                     </div>
+                    <div class="black">
+                        black
+                    </div>
                 </div>
             </div>
         </div>
@@ -21,3 +24,9 @@
         }
     }
 </script>
+<style lang="scss" scoped>
+.black {
+    background-color: black;
+    color: white;
+}
+</style>
