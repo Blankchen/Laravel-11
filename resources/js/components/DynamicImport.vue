@@ -5,5 +5,5 @@
 </template>
 
 <script>
-    await import("@/sass/home.scss");
+    await import("../../sass/home.scss");
 </script>

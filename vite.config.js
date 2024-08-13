@@ -26,7 +26,10 @@ export default (mode) => {
         },
         plugins: [
             laravel({
-                input: ["resources/sass/app.scss", "resources/js/app.js"],
+                input: [
+                    "resources/js/app.js",
+                    "resources/js/vueInstant.js",
+                ],
                 refresh: true,
             }),
             vue({
@@ -48,7 +51,7 @@ export default (mode) => {
         resolve: {
             alias: {
                 vue: "vue/dist/vue.esm-bundler.js",
-                "@": path.resolve(__dirname, "resources"),
+                "@": path.resolve(__dirname, "resources/js"),
                 "~": path.resolve(__dirname, "node_modules"),
                 "^": path.resolve(__dirname, "public"),
             },

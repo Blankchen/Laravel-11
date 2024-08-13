@@ -1,5 +1,5 @@
 <script setup>
-import { Login } from "@/js/api/api";
+import { Login } from "@/api/api";
 import { ref } from "vue";
 
 const counter = ref(0);

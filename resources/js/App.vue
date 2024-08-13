@@ -1,7 +1,5 @@
 <template>
-    <h1>
-        How To Install Vue 3 in Laravel 10 : ZWebCourses :)
-    </h1>
+    <h1>How To Install Vue 3 in Laravel 10 : ZWebCourses :)</h1>
     <el-button>Test</el-button>
 
     <div>
@@ -16,7 +14,7 @@
 
     <div>
         Dynamic import
-        <DynamicImport/>
+        <DynamicImport />
     </div>
 </template>
 
@@ -27,9 +25,25 @@ import { defineAsyncComponent } from "vue";
 export default {
     name: "App",
     components: {
-        Page: defineAsyncComponent(() => import('./components/page/index.vue')),
-        ExampleComponent: defineAsyncComponent(() => import('./components/ExampleComponent.vue')),
-        DynamicImport: defineAsyncComponent(() => import('./components/DynamicImport.vue')),
+        Page: defineAsyncComponent(() => import("./components/page/index.vue")),
+        ExampleComponent: defineAsyncComponent(() =>
+            import("./components/ExampleComponent.vue")
+        ),
+        DynamicImport: defineAsyncComponent(() =>
+            import("./components/DynamicImport.vue")
+        ),
     },
-}
+    data() {
+        return {
+            test123: "test123",
+            // menu
+            isCollapse: false,
+        };
+    },
+    methods: {
+        toggleCollapse() {
+            this.isCollapse = !this.isCollapse;
+        },
+    },
+};
 </script>

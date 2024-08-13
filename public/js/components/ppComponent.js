@@ -29,7 +29,7 @@ const PpSelect = {
 `,
     props: {
         value: {
-            required: true,
+            // required: true,
         },
         list: {
             type: Array,
@@ -131,7 +131,7 @@ const PpDatePicker = {
 `,
     props: {
         value: {
-            required: true,
+            // required: true,
         },
         shortcut_all: {
             required: false,
