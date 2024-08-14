@@ -1,7 +1,8 @@
-@extends('common.master')
+@extends('layout.master')
 @section('content')
-<div id="main_page">
-    <Page></Page>
+<div>
+    123123123
+    <increment-counter />
     {{-- <el-row>
         <el-col :span="24">
             @{{ date }}

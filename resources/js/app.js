@@ -17,7 +17,7 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
  * to use in your application's views. An example is included for you.
  */
 import App from "./App.vue";
-const app = createApp(App);
+const app = createApp({});
 
 app.use(ElementPlus);
 

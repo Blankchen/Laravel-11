@@ -17,6 +17,7 @@ export default (mode) => {
         build: {
             target: "esnext",
 
+            chunkSizeWarningLimit: 1000,
             rollupOptions: {
                 output:{
                     manualChunks(id) {
