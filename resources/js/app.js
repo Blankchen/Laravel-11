@@ -25,8 +25,8 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component)
 }
 
-// import { registerComponents } from './components/components'
-// await registerComponents(app);
+import { registerComponents } from './components/components'
+await registerComponents(app);
 
 /**
  * The following block of code may be used to automatically register your
@@ -50,4 +50,8 @@ app.mount("#app");
 
 
 // ref: https://laravel-docs.catchadmin.com/docs/11/basics/vite#%E4%BD%BF%E7%94%A8-vite-%E5%A4%84%E7%90%86%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90
-import.meta.glob(['../images/**', '../fonts/**'])
+import.meta.glob([
+    '../images/**',
+    '../fonts/**',
+    // './components/**'
+])

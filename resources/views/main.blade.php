@@ -1,7 +1,8 @@
 @extends('common.master')
 @section('content')
 <div id="main_page">
-    <el-row>
+    <Page></Page>
+    {{-- <el-row>
         <el-col :span="24">
             @{{ date }}
             <pp-date-picker v-model="date"></pp-date-picker>
@@ -20,9 +21,9 @@
             />
         </el-col>
     </el-row>
-    <el-button>@{{ message }}</el-button>
+    <el-button>@{{ message }}</el-button> --}}
 </div>
-
+{{--
 <script>
     const Page = {
         data() {
@@ -51,5 +52,5 @@
         page.component(key, component)
     }
     page.mount("#main_page");
-</script>
+</script> --}}
 @endsection

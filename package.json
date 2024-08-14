@@ -16,6 +16,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.3.3",
-        "element-plus": "^2.8.0"
+        "element-plus": "^2.8.0",
+        "glob": "^11.0.0"
     }
 }

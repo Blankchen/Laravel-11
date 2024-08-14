@@ -10,9 +10,15 @@ import "element-plus/dist/index.css";
 const vm = createApp({
     data() {
         return {
-            name: 'test12335'
+            // menu
+            isCollapse: false,
         }
     },
+    methods: {
+        toggleCollapse() {
+            this.isCollapse = !this.isCollapse
+        }
+    }
 });
 vm.use(ElementPlus);
 const vMountedInstance = vm.mount("#hibride");

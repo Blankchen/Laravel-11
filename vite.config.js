@@ -2,15 +2,30 @@ import { defineConfig, loadEnv } from "vite";
 import laravel from "laravel-vite-plugin";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
+import {globSync} from "glob";
+
+let input = [];
+let files = globSync(['resources/js/*.js', 'resources/scss/*.scss'])
+files.forEach(file => {
+    input.push(file.replace(/[\\\/]+/g, '/'));
+});
 
 export default (mode) => {
     const env = loadEnv(mode, process.cwd());
 
-    console.log("envenvenv", env.VITE_APP_BASE_API)
-
     return defineConfig({
         build: {
             target: "esnext",
+
+            rollupOptions: {
+                output:{
+                    manualChunks(id) {
+                        if (id.includes('node_modules')) {
+                            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+                        }
+                    }
+                }
+            }
         },
         // https://vitejs.dev/config/server-options#server-proxy
         server: {
@@ -26,10 +41,7 @@ export default (mode) => {
         },
         plugins: [
             laravel({
-                input: [
-                    "resources/js/app.js",
-                    "resources/js/vueInstant.js",
-                ],
+                input,
                 refresh: true,
             }),
             vue({
